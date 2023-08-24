@@ -1,0 +1,216 @@
+[
+    {
+      "id": 1,
+      "name": "Dr. Emily Smith",
+      "specialty": "Mental Health",
+      "gender": "Female",
+      "availability": ["Mon", "Wed", "Fri"],
+      "image": "../image/beachh.png"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Solange Martinez",
+      "specialty": "Obstetrics and Gynecology",
+      "gender": "Female",
+      "availability": ["Tue", "Thu", "Sat"],
+      "image": "../image/beach3.png"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Leo Johnson",
+      "specialty": "Cardiology",
+      "gender": "Male",
+      "availability": ["Wed", "Fri", "Sun"],
+      "image": "../image/beach1.png"
+    },
+    {
+      "id": 4,
+      "name": "Dr. Mia Williams",
+      "specialty": "Dermatology",
+      "gender": "Female",
+      "availability": ["Mon", "Wed", "Fri"]
+    },
+    {
+      "id": 5,
+      "name": "Dr. Michael Taylor",
+      "specialty": "Orthopedics",
+      "gender": "Male",
+      "availability": ["Tue", "Thu", "Sat"]
+    },
+    {
+      "id": 6,
+      "name": "Dr. Sarah Lee",
+      "specialty": "Pediatrics",
+      "gender": "Female",
+      "availability": ["Mon", "Wed", "Fri"]
+    },
+    {
+      "id": 7,
+      "name": "Dr. Alex Carter",
+      "specialty": "Neurology",
+      "gender": "Non-binary",
+      "availability": ["Tue", "Thu", "Sat"]
+    },
+    {
+      "id": 8,
+      "name": "Dr. Jordan Reed",
+      "specialty": "Internal Medicine",
+      "gender": "Male",
+      "availability": ["Wed", "Fri", "Sun"]
+    },
+    {
+      "id": 9,
+      "name": "Dr. Michelle Davis",
+      "specialty": "Primary Care",
+      "gender": "Female",
+      "availability": ["Mon", "Wed", "Fri"]
+    },
+    {
+      "id": 10,
+      "name": "Dr. James Anderson",
+      "specialty": "Physician",
+      "gender": "Male",
+      "availability": ["Tue", "Thu", "Sat"]
+    },
+    {
+      "id": 11,
+      "name": "Dr. Maria Rodriguez",
+      "specialty": "Medicine",
+      "gender": "Female",
+      "availability": ["Wed", "Fri", "Sun"]
+    },
+    {
+      "id": 12,
+      "name": "Dr. Jonathan White",
+      "specialty": "Occupational Therapists",
+      "gender": "Male",
+      "availability": ["Mon", "Wed", "Fri"]
+    },
+    {
+      "id": 13,
+      "name": "Dr. Olivia Brown",
+      "specialty": "Gynecologists",
+      "gender": "Female",
+      "availability": ["Tue", "Thu", "Sat"]
+    },
+    {
+      "id": 14,
+      "name": "Dr. Benjamin Green",
+      "specialty": "Adult Health",
+      "gender": "Male",
+      "availability": ["Wed", "Fri", "Sun"]
+    },
+    {
+      "id": 15,
+      "name": "Dr. Taylor Parker",
+      "specialty": "Urgent Care",
+      "gender": "Non-binary",
+      "availability": ["Mon", "Wed", "Fri"]
+    },
+    {
+        "id": 16,
+        "name": "Dr. Jasmine Miller",
+        "specialty": "Pediatrics",
+        "gender": "Female",
+        "availability": ["Tue", "Thu", "Sat"]
+      },
+      {
+        "id": 17,
+        "name": "Dr. Christopher Lee",
+        "specialty": "Orthopedics",
+        "gender": "Male",
+        "availability": ["Mon", "Wed", "Fri"]
+      },
+      {
+        "id": 18,
+        "name": "Dr. Laura Adams",
+        "specialty": "Primary Care",
+        "gender": "Female",
+        "availability": ["Tue", "Thu", "Sat"]
+      },
+      {
+        "id": 19,
+        "name": "Dr. Samuel Wright",
+        "specialty": "Physician",
+        "gender": "Male",
+        "availability": ["Mon", "Wed", "Fri"]
+      },
+      {
+        "id": 20,
+        "name": "Dr. Jessica Rivera",
+        "specialty": "Medicine",
+        "gender": "Female",
+        "availability": ["Tue", "Thu", "Sat"]
+      },
+      {
+        "id": 21,
+        "name": "Dr. Ethan Harris",
+        "specialty": "Neurology",
+        "gender": "Male",
+        "availability": ["Mon", "Wed", "Fri"]
+      },
+      {
+        "id": 22,
+        "name": "Dr. Sophia Carter",
+        "specialty": "Gynecologists",
+        "gender": "Female",
+        "availability": ["Tue", "Thu", "Sat"]
+      },
+      {
+        "id": 23,
+        "name": "Dr. William Turner",
+        "specialty": "Cardiology",
+        "gender": "Male",
+        "availability": ["Mon", "Wed", "Fri"]
+      },
+      {
+        "id": 24,
+        "name": "Dr. Olivia Johnson",
+        "specialty": "Dermatology",
+        "gender": "Female",
+        "availability": ["Tue", "Thu", "Sat"]
+      },
+      {
+        "id": 25,
+        "name": "Dr. Alexander Davis",
+        "specialty": "Internal Medicine",
+        "gender": "Male",
+        "availability": ["Mon", "Wed", "Fri"]
+      },
+      {
+        "id": 26,
+        "name": "Dr. Isabella Martinez",
+        "specialty": "Mental Health",
+        "gender": "Female",
+        "availability": ["Tue", "Thu", "Sat"]
+      },
+      {
+        "id": 27,
+        "name": "Dr. Noah Green",
+        "specialty": "Occupational Therapists",
+        "gender": "Male",
+        "availability": ["Mon", "Wed", "Fri"]
+      },
+      {
+        "id": 28,
+        "name": "Dr. Chloe Adams",
+        "specialty": "Urgent Care",
+        "gender": "Female",
+        "availability": ["Tue", "Thu", "Sat"]
+      },
+      {
+        "id": 29,
+        "name": "Dr. Liam Taylor",
+        "specialty": "Adult Health",
+        "gender": "Male",
+        "availability": ["Mon", "Wed", "Fri"]
+      },
+      {
+        "id": 30,
+        "name": "Dr. Ava Parker",
+        "specialty": "Pediatrics",
+        "gender": "Female",
+        "availability": ["Tue", "Thu", "Sat"]
+      }
+  ]
+  
