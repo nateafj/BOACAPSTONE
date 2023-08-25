@@ -29,7 +29,7 @@ function HealthCare() {
     return matchesCategory && matchesGender && matchesAvailability;
   });
   return (
-    <>
+    <div section className="healthpage">
       <div className="header">
         <div className="overlay"></div>
         <div className="text"> Increasing access to healthcare </div>
@@ -102,7 +102,7 @@ function HealthCare() {
 
       <Filters setSelectedFilters={setSelectedFilters} />
       <ProviderList providers={filteredProviders} />
-    </>
+    </div>
   );
 }
 

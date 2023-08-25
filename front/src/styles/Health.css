@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&family=Paytone+One&display=swap");
 
+.healthpage {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
 /* header */
 .header {
   position: relative;
@@ -56,7 +61,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 80px;
+
   width: 100vw;
 }
 
