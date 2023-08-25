@@ -39,6 +39,7 @@ function Filters({ setSelectedFilters }) {
   return (
     <div className="searchbar-ctnr">
       <div className="search-bar">
+        <h3 className="doctor-header"> Find your doctor </h3>
         <select className="option" onChange={handleCategoryChange}>
           <option value="">Select Category</option>
           {categories.map((category) => (

@@ -65,11 +65,11 @@ function HealthCare() {
             healthcare providers on your schedule. No membership fees, no
             surprise bills, no insurance needed.
           </p>
-          <button className="doctor-btn">Find My Doctor</button>
+          {/* <button className="doctor-btn">Find My Doctor</button> */}
         </div>
       </div>
 
-      <section className="benefits-section">
+      {/* <section className="benefits-section">
         <div className="benefit">
           <img src="" className="benegit-img" alt="" />
           <h5 className="benefit-header"> Improve Care Coordination</h5>
@@ -98,7 +98,7 @@ function HealthCare() {
             medical advice, prescriptions, and treatment plans.
           </p>
         </div>
-      </section>
+      </section> */}
 
       <Filters setSelectedFilters={setSelectedFilters} />
       <ProviderList providers={filteredProviders} />
