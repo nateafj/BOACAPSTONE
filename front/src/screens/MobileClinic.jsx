@@ -6,8 +6,6 @@ function MobileClinic() {
     <div>
       <div class="embed-container">
         <iframe
-          width="500"
-          height="400"
           frameborder="0"
           scrolling="no"
           marginheight="0"
