@@ -347,3 +347,37 @@ select {
   bottom: 0;
   margin-bottom: -15px;
 }
+/* Add these styles to your CSS file */
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 30px;
+}
+
+.custom-pagination li {
+  margin: 0 5px;
+}
+
+.custom-pagination .page-link {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-pagination .page-link.active {
+  background-color: red;
+  border-color: red;
+  color: white;
+}
+
+/* Hide the "current" text using a more specific selector */
+.custom-pagination .page-item.active .page-link .sr-only {
+  display: none;
+}
+.visually-hidden {
+  display: none;
+}
