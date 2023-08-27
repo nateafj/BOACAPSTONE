@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Health.css";
 import "../components/DoctorAppointment/ProviderList";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Filters from "../components/DoctorAppointment/Filter";
 import providersData from "../components/DoctorAppointment/providers.json";
 import ProviderList from "../components/DoctorAppointment/ProviderList";
@@ -14,21 +14,26 @@ function HealthCare() {
     availability: "",
   });
 
-  // Assuming providersData contains the JSON data you provided
-  const filteredProviders = providersData.filter((provider) => {
-    // const matchesSearch = provider.name.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory =
-      selectedFilters.category === "" ||
-      provider.specialty === selectedFilters.category;
-    const matchesGender =
-      selectedFilters.gender === "" ||
-      provider.gender === selectedFilters.gender;
-    const matchesAvailability =
-      selectedFilters.availability === "" ||
-      provider.availability.includes(selectedFilters.availability);
+  const [filteredProviders, setFilteredProviders] = useState([]);
 
-    return matchesCategory && matchesGender && matchesAvailability;
-  });
+  useEffect(() => {
+    const filteredProviders = providersData.filter((provider) => {
+      const matchesCategory =
+        selectedFilters.category === "" ||
+        provider.specialty === selectedFilters.category;
+      const matchesGender =
+        selectedFilters.gender === "" ||
+        provider.gender === selectedFilters.gender;
+      const matchesAvailability =
+        selectedFilters.availability === "" ||
+        provider.availability.includes(selectedFilters.availability);
+
+      return matchesCategory && matchesGender && matchesAvailability;
+    });
+
+    setFilteredProviders(filteredProviders);
+  }, [selectedFilters]);
+
   return (
     <div section className="healthpage">
       <div className="header">
