@@ -60,9 +60,9 @@
     },
     {
       "id": 9,
-      "name": "Dr. Michele Davis",
+      "name": "Dr. Michelle Davis",
       "specialty": "Primary Care",
-      "gender": "Male",
+      "gender": "Female",
       "availability": ["Mon", "Wed", "Fri"]
     },
     {
@@ -88,30 +88,30 @@
     },
     {
       "id": 13,
-      "name": "Dr. Oliver Brown",
+      "name": "Dr. Oliva Brown",
       "specialty": "Gynecologists",
-      "gender": "Male",
+      "gender": "Female",
       "availability": ["Tue", "Thu", "Sat"]
     },
     {
       "id": 14,
-      "name": "Dr. Benjamin Green",
+      "name": "Dr. Becky Green",
       "specialty": "Adult Health",
-      "gender": "Male",
+      "gender": "Female",
       "availability": ["Wed", "Fri", "Sun"]
     },
     {
       "id": 15,
       "name": "Dr. Taylor Parker",
       "specialty": "Urgent Care",
-      "gender": "Non-binary",
+      "gender": "Female",
       "availability": ["Mon", "Wed", "Fri"]
     },
     {
         "id": 16,
-        "name": "Dr. Jaxston Miller",
+        "name": "Dr. Jackie Miller",
         "specialty": "Pediatrics",
-        "gender": "Male",
+        "gender": "Female",
         "availability": ["Tue", "Thu", "Sat"]
       },
       {
@@ -123,9 +123,9 @@
       },
       {
         "id": 18,
-        "name": "Dr. Laura Adams",
+        "name": "Dr. Lawrence Adams",
         "specialty": "Primary Care",
-        "gender": "Female",
+        "gender": "Male",
         "availability": ["Tue", "Thu", "Sat"]
       },
       {

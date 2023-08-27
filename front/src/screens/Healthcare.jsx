@@ -1,10 +1,11 @@
 import React from "react";
 import "../styles/Health.css";
 import "../components/DoctorAppointment/ProviderList";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Filters from "../components/DoctorAppointment/Filter";
 import providersData from "../components/DoctorAppointment/providers.json";
 import ProviderList from "../components/DoctorAppointment/ProviderList";
+import { Link } from "react-router-dom";
 
 function HealthCare() {
   const [selectedFilters, setSelectedFilters] = useState({
@@ -13,21 +14,26 @@ function HealthCare() {
     availability: "",
   });
 
-  // Assuming providersData contains the JSON data you provided
-  const filteredProviders = providersData.filter((provider) => {
-    // const matchesSearch = provider.name.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory =
-      selectedFilters.category === "" ||
-      provider.specialty === selectedFilters.category;
-    const matchesGender =
-      selectedFilters.gender === "" ||
-      provider.gender === selectedFilters.gender;
-    const matchesAvailability =
-      selectedFilters.availability === "" ||
-      provider.availability.includes(selectedFilters.availability);
+  const [filteredProviders, setFilteredProviders] = useState([]);
 
-    return matchesCategory && matchesGender && matchesAvailability;
-  });
+  useEffect(() => {
+    const filteredProviders = providersData.filter((provider) => {
+      const matchesCategory =
+        selectedFilters.category === "" ||
+        provider.specialty === selectedFilters.category;
+      const matchesGender =
+        selectedFilters.gender === "" ||
+        provider.gender === selectedFilters.gender;
+      const matchesAvailability =
+        selectedFilters.availability === "" ||
+        provider.availability.includes(selectedFilters.availability);
+
+      return matchesCategory && matchesGender && matchesAvailability;
+    });
+
+    setFilteredProviders(filteredProviders);
+  }, [selectedFilters]);
+
   return (
     <div section className="healthpage">
       <div className="header">
@@ -65,10 +71,35 @@ function HealthCare() {
             healthcare providers on your schedule. No membership fees, no
             surprise bills, no insurance needed.
           </p>
-          {/* <button className="doctor-btn">Find My Doctor</button> */}
+          <button className="doctor-btn">Find My Doctor</button>
         </div>
       </div>
 
+      <div class="health-about-section">
+        <div class="health-about-content">
+          <h2 className="health-heading"> Mobile health clinics</h2>
+          <h5 className="health-secondary-heading">
+            {" "}
+            Bringing healthcare to you{" "}
+          </h5>
+          <p class="paragraph">
+            There are an estimated 3,000 mobile clinics in the U.S. with 10
+            million visits each year. By making health care accessible for both
+            rural and urban communities, mobile clinics ensure that everyone has
+            access to lifesaving preventive, primary care, and specialty
+            services. As trusted providers of quality health care, mobile
+            clinics reach marginalized communities and advance health equity.
+          </p>
+          <Link to="/mobile">
+            <button className="doctor-btn">Find a mobile clinic </button>
+          </Link>
+        </div>
+        <img
+          src={require("../images/mobile.png")}
+          className="health-about-img"
+          alt=""
+        />
+      </div>
       {/* <section className="benefits-section">
         <div className="benefit">
           <img src="" className="benegit-img" alt="" />
