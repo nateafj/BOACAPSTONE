@@ -5,6 +5,7 @@ import { useState } from "react";
 import Filters from "../components/DoctorAppointment/Filter";
 import providersData from "../components/DoctorAppointment/providers.json";
 import ProviderList from "../components/DoctorAppointment/ProviderList";
+import { Link } from "react-router-dom";
 
 function HealthCare() {
   const [selectedFilters, setSelectedFilters] = useState({
@@ -65,10 +66,35 @@ function HealthCare() {
             healthcare providers on your schedule. No membership fees, no
             surprise bills, no insurance needed.
           </p>
-          {/* <button className="doctor-btn">Find My Doctor</button> */}
+          <button className="doctor-btn">Find My Doctor</button>
         </div>
       </div>
 
+      <div class="health-about-section">
+        <div class="health-about-content">
+          <h2 className="health-heading"> Mobile health clinics</h2>
+          <h5 className="health-secondary-heading">
+            {" "}
+            Bringing healthcare to you{" "}
+          </h5>
+          <p class="paragraph">
+            There are an estimated 3,000 mobile clinics in the U.S. with 10
+            million visits each year. By making health care accessible for both
+            rural and urban communities, mobile clinics ensure that everyone has
+            access to lifesaving preventive, primary care, and specialty
+            services. As trusted providers of quality health care, mobile
+            clinics reach marginalized communities and advance health equity.
+          </p>
+          <Link to="/mobile">
+            <button className="doctor-btn">Find a mobile clinic </button>
+          </Link>
+        </div>
+        <img
+          src={require("../images/mobile.png")}
+          className="health-about-img"
+          alt=""
+        />
+      </div>
       {/* <section className="benefits-section">
         <div className="benefit">
           <img src="" className="benegit-img" alt="" />
@@ -102,8 +128,6 @@ function HealthCare() {
 
       <Filters setSelectedFilters={setSelectedFilters} />
       <ProviderList providers={filteredProviders} />
-
-     
     </div>
   );
 }
