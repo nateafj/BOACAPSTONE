@@ -1,40 +1,92 @@
-const mysql = require('mysql2');
-const express = require('express');
-const cors = require('cors');
+const express = require("express");
+const cors = require("cors");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv").config();
+
 const app = express();
-
 app.use(cors());
+app.use(express.json({ limit: "10mb" }));
 
-const connection = mysql.createConnection({
-  host: 'boa-capstone.czrh3mi43dg5.us-east-2.rds.amazonaws.com',
-  user: 'admin',
-  password: 'password',
-  database: 'Capstone',
+const PORT = process.env.PORT || 8080;
+
+// MongoDB connection
+console.log(process.env.MONGODB_URL);
+mongoose.set("strictQuery", false);
+mongoose
+  .connect(process.env.MONGODB_URL)
+  .then(() => console.log("Connected to Database"))
+  .catch((err) => console.log(err));
+
+//schema
+const userSchema = mongoose.Schema({
+  firstName: String,
+  lastName: String,
+  email: {
+    type: String,
+    unique: true,
+  },
+  password: String,
+  confirmPassword: String,
+  image: String,
 });
 
-// Connect to the database
-connection.connect((err) => {
-  if (err) {
-    console.error('Error connecting to the database:', err);
-    return;
-  }
-  console.log('Connected to the database');
+//
+const userModel = mongoose.model("user", userSchema);
+
+//API
+app.get("/", (req, res) => {
+  res.send("Server is running");
 });
 
-app.get('/Users', (req, res) => {
-  const query = 'SELECT * FROM user_login';
-  connection.query(query, (err, data) => {
-    if (err) {
-      console.error('Error executing the query:', err);
-      res.status(500).json({ error: 'Internal server error' });
-      return;
+// Signup
+app.post("/Signup", async (req, res) => {
+  console.log(req.body);
+  const { email } = req.body;
+
+  try {
+    const result = await userModel.findOne({ email: email });
+    console.log(result);
+
+    if (result) {
+      res.send({ message: "Email id is already registered",alert : false});
+    } else {
+      const data = new userModel(req.body);
+      const savedData = await data.save();
+      res.send({ message: "Successfully signed up",alert: true });
     }
-    return res.json(data);
-  });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
-const port = 3009; // replace with your desired port number
+// Login
+app.post("/Login", async (req, res) => {
+  try {
+    console.log(req.body);
+    const { email } = req.body;
 
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+    const result = await userModel.findOne({ email: email });
+
+    if (result) {
+      console.log(result);
+      const dataSend = {
+          _id:result._id,
+          firstName: result.firstName,
+          lastName: result.lastName,
+          email: result.email,
+          image: result.image,
+      };
+      console.log(dataSend)
+      res.send({ message: "Login successful", alert: true,data : dataSend });
+    }
+    else{
+      res.send({ message: "Email is not available, please sign up", alert: false})
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Internal Server Error");
+  }
 });
+
+app.listen(PORT, () => console.log("Server is running on port :" + PORT));
