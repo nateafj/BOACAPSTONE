@@ -1,47 +1,34 @@
-import React from 'react'
+import React ,{useEffect}from 'react';
 
 const Footer = () => {
-  return (
-    <div>
-      <div class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="footer-col1">
-               <h3>Download Our App</h3>
-                <p>Download App for Android and ios mobile phone.</p>
-                <div class="app-logo">
-                    <img src="images/play-store.png"/>
-                    <img src="images/app-store.png"/>
-                </div>
-            </div>
-            <div class="footer-col2">
-               
-                <p></p>
-            </div>
-            <div class="footer-col3">
-               <h3>Useful Links</h3>
-                <ul>
-                    <li>Coupons</li>
-                    <li>Blog Post</li>
-                    <li>Return Policy</li>
-                    <li>Join Affiliate</li>
-                </ul>
-            </div>
-            <div class="footer-col4">
-               <h3>Follow Us</h3>
-                <ul>
-                    <li>Facebook</li>
-                    <li>Twitter</li>
-                    <li>Instagram</li>
-                    <li>YouTube</li>
-                </ul>
-            </div>
-        </div>
-        <p class="copyright"><a href="https://www.youtube.com/c/EasyTutorialsVideo?sub_confirmation=1">Copyright 2023 MANGAMODE</a></p>
-    </div>
-    
+    useEffect(() => {const script = document.createElement('script'); script.src = "https://kit.fontawesome.com/c4254e24a8.js"; script.async = true; document.body.appendChild(script);return () => { document.body.removeChild(script); }; }, []);
+    return (
+
+<div class="Footer">
+<div class="col-a">
+<h3>USEFUL LINKS</h3>
+<a href="#">About</a>
+<a href="#">Services</a>
+<a href="#">Contact</a>
 </div>
-    </div>
+<div class="col-b">
+<h3>NEWSLETTER</h3>
+<form>
+<input type="email" placeholder="Your Email Address" required/>
+<br/>
+<button type="submit">SUBSCRIBE NOW</button>
+</form>
+</div>
+<div class="col-c">
+<h3>CONTACT</h3>
+<p>124, Conch St.<br/>Bikini Bottom</p>
+<div class="social-icons">
+<i class="fab fa-facebook"></i>
+<i class="fab fa-twitter"></i>
+<i class="fab fa-instagram"></i>
+</div>
+</div>
+</div>
   )
 }
 

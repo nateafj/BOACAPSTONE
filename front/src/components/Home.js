@@ -9,6 +9,7 @@ import Tes3 from './RENGOKU.jpg';
 import BANK from './BOASMILE.jpg';
 import '../styles/Home.css';
 import Header from './Header'
+import Footer from './Footer';
 
 const Home = () => {
   return (
@@ -36,7 +37,7 @@ const Home = () => {
            </div>
            <div class="col-2">
                <h1>Our Mission</h1>
-               <small>"Elevating Communities, Enriching Lives: [Company Name] is committed to creating lasting positive change through impactful philanthropy. Our focus on education, healthcare, and sustainable solutions drives us to build stronger, more vibrant communities for everyone."</small>
+               <small>"Elevating Communities, Enriching Lives: committed to creating lasting positive change through impactful philanthropy. Our focus on education, healthcare, and sustainable solutions drives us to build stronger, more vibrant communities for everyone."</small>
                <br/>
                <a href="/" class="bttn">Meet The Team! &#8594;</a>
            </div>
@@ -86,7 +87,7 @@ const Home = () => {
        </div>
        </div>
    </div>
-  
+  <Footer/>
  </>
 
   )
