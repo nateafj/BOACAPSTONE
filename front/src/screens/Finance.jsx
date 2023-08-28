@@ -8,9 +8,12 @@ const Finance = () =>{
     return(
         <>
         <Header/>
-        <BackgroundSlider/>
-            <h1>Financial Literacy</h1>
+        <div className='paycheck'>
+            <BackgroundSlider/>
+                <h1>Financial Literacy</h1>
             <BudgetTracker/>
+        </div>
+        
         </>
         
     )
