@@ -9,7 +9,7 @@ import HealthCare from './screens/Healthcare.jsx';
 import Home from './components/Home';
 import MobileClinic from './screens/MobileClinic';
 import Login from './login';
-import Signup from './Signup'
+import Signup from './SignUp'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
